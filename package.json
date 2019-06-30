@@ -4,9 +4,33 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "browserify ./src/main.js -o ./static/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["isomorphic", "study"],
+  "browserify": {
+    "transform": [
+      "es2040"
+    ]
+  },
+  "keywords": [
+    "isomorphic",
+    "study"
+  ],
   "author": "ishiduca@gmail.com",
-  "license": "Apach-2.0"
+  "license": "Apach-2.0",
+  "dependencies": {
+    "@ishiduca/snoopy": "0.0.2",
+    "@ishiduca/snoopy-multi": "0.0.3",
+    "ecstatic": "^4.1.2",
+    "global": "^4.4.0",
+    "mississippi": "^4.0.0",
+    "nanohref": "^3.1.0",
+    "routington": "^1.0.3",
+    "xtend": "^4.0.1",
+    "yo-yo": "^1.4.1"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "es2040": "^1.2.6"
+  }
 }
